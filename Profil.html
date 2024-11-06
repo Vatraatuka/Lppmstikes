@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Profil - KULIAH PAKAR</title>
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+    <style>
+      /* Latar belakang video */
+      body {
+        font-family: "Open Sans", sans-serif;
+        margin: 0;
+        padding: 0;
+      }
+
+      /* Video latar belakang */
+      video.background-video {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+        z-index: -1; /* Pastikan video ada di belakang konten */
+      }
+
+      .container {
+        padding: 30px;
+        border-radius: 8px;
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        max-width: 800px;
+        margin: 100px auto;
+        text-align: center;
+      }
+
+      h1 {
+        color: hsl(270, 14%, 91%);
+        margin-bottom: 20px;
+      }
+
+      .profile-photo {
+        width: 200px;
+        height: 200px;
+        border-radius: 50%;
+        margin-bottom: 30px;
+        object-fit: cover;
+      }
+
+      .profile-info {
+        color: #2196f3; /* Warna biru untuk teks profil */
+        font-size: 1.1em;
+        text-align: left;
+      }
+
+      /* Menu Styling */
+      .w3-bar {
+        display: flex; /* Menampilkan menu secara vertical pada desktop */
+        justify-content: center; /* Menyusun menu utama di bawahtiga garis */
+        background-color: rgba
+        flex-wrap: wrap; /* Membuat menu wrap jika terlalu lebar */
+      }
+
+      .w3-bar-item {
+        color: hwb(0 98% 2%); /* Warna teks menu putih untuk kontras */
+        padding: 15px 20px;
+        font-size: 16px;
+        text-align: center;
+        text-decoration: none;
+        display: flex; /* menu utama naik ke bawah */
+        align-items: center; /* Vertikal center alignment */
+      }
+
+      .w3-bar-item i {
+        margin-right: 10px; /* Memberikan jarak antara ikon dan teks */
+      }
+
+      .w3-bar-item:hover {
+        background-color: rgba(255, 255, 255, 0.2);
+      }
+
+      .menu-toggle {
+        display: none; /* Menyembunyikan tombol menu pada tampilan desktop */
+        font-size: 1.5em;
+        padding: 10px;
+        color: #fff; /* Warna putih untuk ikon menu */
+        cursor: pointer;
+        position: fixed; /* Menempatkan tombol di bawah halaman */
+        top: 20px;
+        left: 20px; /* Menyesuaikan tombol dengan menu di kiri */
+        z-index: 1000; /* Memastikan tombol selalu di atas */
+      }
+
+      /* Media query untuk tampilan ponsel */
+      @media (max-width: 768px) {
+        .menu-toggle {
+          display: block; /* Menampilkan tombol menu pada tampilan ponsel */
+        }
+
+        .w3-bar {
+          display: none; /* Menyembunyikan menu pada ponsel secara default */
+          flex-direction: column; /* Menyusun menu secara vertikal pada ponsel */
+          position: fixed; /* Agar menu terletak di bawah konten */
+          top: 60px; /* Memberikan jarak menu dari tombol */
+          width: 100%;
+          left: 0;
+          z-index: 999;
+        }
+
+        .w3-bar.open {
+          display: flex; /* Menampilkan menu ketika tombol diklik */
+        }
+
+        .w3-bar-item {
+          font-size: 18px;
+          padding: 12px 20px;
+          width: 100%; /* Agar item menu memenuhi lebar layar */
+          text-align: left;
+        }
+      }
+    </style>
+  </head>
+  <body class="w3-theme-l5">
+    <!-- Video Background -->
+    <video class="background-video" autoplay loop muted>
+      <source
+        src="Telematika Dalam Kejadian Fraud di Rumah Sakit.mp4"
+        type="video/mp4"
+      />
+      Browser Anda tidak mendukung elemen video.
+    </video>
+
+    <!-- Tombol Menu untuk Mobile -->
+    <span class="menu-toggle" onclick="toggleMenu()">&#9776; Menu</span>
+
+    <!-- Menu -->
+    <div class="w3-bar">
+      <a href="dashboard.html" class="w3-bar-item w3-button w3-padding-large">
+        <i class="fa fa-home w3-margin-right"></i>HOME
+      </a>
+      <a
+        href="Lokasi.html"
+        class="w3-bar-item w3-button w3-padding-large"
+        title="Lokasi"
+      >
+        <i class="fa fa-globe"></i> Lokasi
+      </a>
+      <a
+        href="Profil.html"
+        class="w3-bar-item w3-button w3-padding-large"
+        title="Profil"
+      >
+        <i class="fa fa-user"></i> Profil
+      </a>
+      <a
+        href="PromosiKampus.html"
+        class="w3-bar-item w3-button w3-padding-large"
+        title="Promosi Kampus"
+      >
+        <i class="fa fa-bullhorn"></i> <span>Promosi Kampus</span>
+      </a>
+      <a
+        href="logout.html"
+        class="w3-bar-item w3-button w3-padding-large"
+        title="Logout"
+      >
+        <i class="fa fa-sign-out"></i> Logout
+      </a>
+    </div>
+
+    <main>
+      <div class="container">
+        <h1>Profil Pengguna</h1>
+        <img src="logo lppm.jpg" alt="Foto Profil" class="profile-photo" />
+        <div class="profile-info">
+          <p><strong>Nama:</strong> LPPM Stikes Bakti Nusantara Gorontalo</p>
+          <p><strong>Email:</strong> stikesbaktara@gmail.com</p>
+          <p><strong>No. Telepon:</strong> 081234567890</p>
+          <p>
+            <strong>Alamat:</strong> Jln. Otanaha Putra, Desa. Luhu, Kec.
+            Telaga, Kab. Gorontalo
+          </p>
+        </div>
+      </div>
+    </main>
+
+    <script>
+      // Fungsi untuk mengaktifkan dan menonaktifkan menu di perangkat mobile
+      function toggleMenu() {
+        document.querySelector(".w3-bar").classList.toggle("open");
+      }
+    </script>
+  </body>
+</html>
